@@ -1,0 +1,653 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C0D9E5476C14D34AD992598 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20DFB513FD634152B44C2B25 /* libPods.a */; };
+		7F4D276218EC983B00FEFC56 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D276118EC983B00FEFC56 /* Article.m */; };
+		7F4D276518ED34D000FEFC56 /* NPDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D276418ED34D000FEFC56 /* NPDataLoader.m */; };
+		7FACC9C118F14C66004FCE04 /* ArticleSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC9C018F14C66004FCE04 /* ArticleSource.m */; };
+		7FACC9C418F16EEC004FCE04 /* SNHeadlineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC9C318F16EEC004FCE04 /* SNHeadlineTableViewCell.m */; };
+		7FACC9C718F17ABA004FCE04 /* SNArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC9C618F17ABA004FCE04 /* SNArticleViewController.m */; };
+		7FACC9CA18F17C30004FCE04 /* NSString+JSONString.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC9C918F17C30004FCE04 /* NSString+JSONString.m */; };
+		7FACC9CD18F17D16004FCE04 /* HTMLBase.html in Resources */ = {isa = PBXBuildFile; fileRef = 7FACC9CB18F17D16004FCE04 /* HTMLBase.html */; };
+		7FACC9CE18F17D16004FCE04 /* javascript.js in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC9CC18F17D16004FCE04 /* javascript.js */; };
+		7FACC9CF18F17D38004FCE04 /* javascript.js in Resources */ = {isa = PBXBuildFile; fileRef = 7FACC9CC18F17D16004FCE04 /* javascript.js */; };
+		7FACC9D518F1BFB1004FCE04 /* NPSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC9D418F1BFB1004FCE04 /* NPSideMenuViewController.m */; };
+		F63E2C5718E5972800E3A4A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63E2C5618E5972800E3A4A7 /* Foundation.framework */; };
+		F63E2C5918E5972800E3A4A7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63E2C5818E5972800E3A4A7 /* CoreGraphics.framework */; };
+		F63E2C5B18E5972800E3A4A7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63E2C5A18E5972800E3A4A7 /* UIKit.framework */; };
+		F63E2C5D18E5972800E3A4A7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63E2C5C18E5972800E3A4A7 /* CoreData.framework */; };
+		F63E2C6318E5972800E3A4A7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F63E2C6118E5972800E3A4A7 /* InfoPlist.strings */; };
+		F63E2C6518E5972800E3A4A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F63E2C6418E5972800E3A4A7 /* main.m */; };
+		F63E2C6918E5972800E3A4A7 /* NPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F63E2C6818E5972800E3A4A7 /* NPAppDelegate.m */; };
+		F63E2C6C18E5972800E3A4A7 /* NewsPlace.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F63E2C6A18E5972800E3A4A7 /* NewsPlace.xcdatamodeld */; };
+		F63E2C6E18E5972800E3A4A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F63E2C6D18E5972800E3A4A7 /* Images.xcassets */; };
+		F63E2C7518E5972800E3A4A7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63E2C7418E5972800E3A4A7 /* XCTest.framework */; };
+		F63E2C7618E5972800E3A4A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63E2C5618E5972800E3A4A7 /* Foundation.framework */; };
+		F63E2C7718E5972800E3A4A7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63E2C5A18E5972800E3A4A7 /* UIKit.framework */; };
+		F63E2C7818E5972800E3A4A7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63E2C5C18E5972800E3A4A7 /* CoreData.framework */; };
+		F63E2C8018E5972800E3A4A7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F63E2C7E18E5972800E3A4A7 /* InfoPlist.strings */; };
+		F63E2C8218E5972800E3A4A7 /* NewsPlaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F63E2C8118E5972800E3A4A7 /* NewsPlaceTests.m */; };
+		F63E2C8E18E5997600E3A4A7 /* NPAAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F63E2C8D18E5997600E3A4A7 /* NPAAPIClient.m */; };
+		F63E2C9918E59ED700E3A4A7 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F63E2C9818E59ED700E3A4A7 /* Storyboard.storyboard */; };
+		F63E2C9F18E59F3200E3A4A7 /* NPHighlightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F63E2C9E18E59F3200E3A4A7 /* NPHighlightsViewController.m */; };
+		F6AA401218F42BCF003940A6 /* ArticleCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA401118F42BCF003940A6 /* ArticleCategory.m */; };
+		F6CE083618EF1A4000BA4011 /* NSManagedObject+Fetching.m in Sources */ = {isa = PBXBuildFile; fileRef = F6CE083318EF1A4000BA4011 /* NSManagedObject+Fetching.m */; };
+		F6CE083718EF1A4000BA4011 /* NSManagedObject+JSONMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = F6CE083518EF1A4000BA4011 /* NSManagedObject+JSONMapping.m */; };
+		F6CE083B18EF1B5000BA4011 /* NPDateParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F6CE083A18EF1B5000BA4011 /* NPDateParser.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F63E2C7918E5972800E3A4A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F63E2C4B18E5972800E3A4A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F63E2C5218E5972800E3A4A7;
+			remoteInfo = NewsPlace;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		20DFB513FD634152B44C2B25 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F4D276018EC983B00FEFC56 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Article.h; sourceTree = "<group>"; };
+		7F4D276118EC983B00FEFC56 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Article.m; sourceTree = "<group>"; };
+		7F4D276318ED34D000FEFC56 /* NPDataLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NPDataLoader.h; path = ../Controller/NPDataLoader.h; sourceTree = "<group>"; };
+		7F4D276418ED34D000FEFC56 /* NPDataLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NPDataLoader.m; path = ../Controller/NPDataLoader.m; sourceTree = "<group>"; };
+		7FACC9BF18F14C66004FCE04 /* ArticleSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleSource.h; sourceTree = "<group>"; };
+		7FACC9C018F14C66004FCE04 /* ArticleSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleSource.m; sourceTree = "<group>"; };
+		7FACC9C218F16EEC004FCE04 /* SNHeadlineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNHeadlineTableViewCell.h; sourceTree = "<group>"; };
+		7FACC9C318F16EEC004FCE04 /* SNHeadlineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNHeadlineTableViewCell.m; sourceTree = "<group>"; };
+		7FACC9C518F17ABA004FCE04 /* SNArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNArticleViewController.h; sourceTree = "<group>"; };
+		7FACC9C618F17ABA004FCE04 /* SNArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNArticleViewController.m; sourceTree = "<group>"; };
+		7FACC9C818F17C30004FCE04 /* NSString+JSONString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JSONString.h"; sourceTree = "<group>"; };
+		7FACC9C918F17C30004FCE04 /* NSString+JSONString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JSONString.m"; sourceTree = "<group>"; };
+		7FACC9CB18F17D16004FCE04 /* HTMLBase.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = HTMLBase.html; sourceTree = "<group>"; };
+		7FACC9CC18F17D16004FCE04 /* javascript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = javascript.js; sourceTree = "<group>"; };
+		7FACC9D318F1BFB1004FCE04 /* NPSideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPSideMenuViewController.h; sourceTree = "<group>"; };
+		7FACC9D418F1BFB1004FCE04 /* NPSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPSideMenuViewController.m; sourceTree = "<group>"; };
+		8F5001534F134F80B0C69A03 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		F63E2C5318E5972800E3A4A7 /* NewsPlace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsPlace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F63E2C5618E5972800E3A4A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F63E2C5818E5972800E3A4A7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F63E2C5A18E5972800E3A4A7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F63E2C5C18E5972800E3A4A7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F63E2C6018E5972800E3A4A7 /* NewsPlace-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NewsPlace-Info.plist"; sourceTree = "<group>"; };
+		F63E2C6218E5972800E3A4A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F63E2C6418E5972800E3A4A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F63E2C6618E5972800E3A4A7 /* NewsPlace-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewsPlace-Prefix.pch"; sourceTree = "<group>"; };
+		F63E2C6718E5972800E3A4A7 /* NPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPAppDelegate.h; sourceTree = "<group>"; };
+		F63E2C6818E5972800E3A4A7 /* NPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPAppDelegate.m; sourceTree = "<group>"; };
+		F63E2C6B18E5972800E3A4A7 /* NewsPlace.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NewsPlace.xcdatamodel; sourceTree = "<group>"; };
+		F63E2C6D18E5972800E3A4A7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F63E2C7318E5972800E3A4A7 /* NewsPlaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsPlaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F63E2C7418E5972800E3A4A7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F63E2C7D18E5972800E3A4A7 /* NewsPlaceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NewsPlaceTests-Info.plist"; sourceTree = "<group>"; };
+		F63E2C7F18E5972800E3A4A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F63E2C8118E5972800E3A4A7 /* NewsPlaceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsPlaceTests.m; sourceTree = "<group>"; };
+		F63E2C8C18E5997600E3A4A7 /* NPAAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPAAPIClient.h; sourceTree = "<group>"; };
+		F63E2C8D18E5997600E3A4A7 /* NPAAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPAAPIClient.m; sourceTree = "<group>"; };
+		F63E2C9818E59ED700E3A4A7 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		F63E2C9D18E59F3200E3A4A7 /* NPHighlightsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPHighlightsViewController.h; sourceTree = "<group>"; };
+		F63E2C9E18E59F3200E3A4A7 /* NPHighlightsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPHighlightsViewController.m; sourceTree = "<group>"; };
+		F6AA401018F42BCF003940A6 /* ArticleCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleCategory.h; sourceTree = "<group>"; };
+		F6AA401118F42BCF003940A6 /* ArticleCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleCategory.m; sourceTree = "<group>"; };
+		F6CE083218EF1A4000BA4011 /* NSManagedObject+Fetching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+Fetching.h"; path = "../Model/NSManagedObject+Fetching.h"; sourceTree = "<group>"; };
+		F6CE083318EF1A4000BA4011 /* NSManagedObject+Fetching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+Fetching.m"; path = "../Model/NSManagedObject+Fetching.m"; sourceTree = "<group>"; };
+		F6CE083418EF1A4000BA4011 /* NSManagedObject+JSONMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+JSONMapping.h"; path = "../Model/NSManagedObject+JSONMapping.h"; sourceTree = "<group>"; };
+		F6CE083518EF1A4000BA4011 /* NSManagedObject+JSONMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+JSONMapping.m"; path = "../Model/NSManagedObject+JSONMapping.m"; sourceTree = "<group>"; };
+		F6CE083918EF1B5000BA4011 /* NPDateParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPDateParser.h; sourceTree = "<group>"; };
+		F6CE083A18EF1B5000BA4011 /* NPDateParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPDateParser.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F63E2C5018E5972800E3A4A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F63E2C5918E5972800E3A4A7 /* CoreGraphics.framework in Frameworks */,
+				F63E2C5D18E5972800E3A4A7 /* CoreData.framework in Frameworks */,
+				F63E2C5B18E5972800E3A4A7 /* UIKit.framework in Frameworks */,
+				F63E2C5718E5972800E3A4A7 /* Foundation.framework in Frameworks */,
+				0C0D9E5476C14D34AD992598 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F63E2C7018E5972800E3A4A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F63E2C7518E5972800E3A4A7 /* XCTest.framework in Frameworks */,
+				F63E2C7818E5972800E3A4A7 /* CoreData.framework in Frameworks */,
+				F63E2C7718E5972800E3A4A7 /* UIKit.framework in Frameworks */,
+				F63E2C7618E5972800E3A4A7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F63E2C4A18E5972800E3A4A7 = {
+			isa = PBXGroup;
+			children = (
+				F63E2C5E18E5972800E3A4A7 /* NewsPlace */,
+				F63E2C7B18E5972800E3A4A7 /* NewsPlaceTests */,
+				F63E2C5518E5972800E3A4A7 /* Frameworks */,
+				F63E2C5418E5972800E3A4A7 /* Products */,
+				8F5001534F134F80B0C69A03 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		F63E2C5418E5972800E3A4A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F63E2C5318E5972800E3A4A7 /* NewsPlace.app */,
+				F63E2C7318E5972800E3A4A7 /* NewsPlaceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F63E2C5518E5972800E3A4A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F63E2C5618E5972800E3A4A7 /* Foundation.framework */,
+				F63E2C5818E5972800E3A4A7 /* CoreGraphics.framework */,
+				F63E2C5A18E5972800E3A4A7 /* UIKit.framework */,
+				F63E2C5C18E5972800E3A4A7 /* CoreData.framework */,
+				F63E2C7418E5972800E3A4A7 /* XCTest.framework */,
+				20DFB513FD634152B44C2B25 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F63E2C5E18E5972800E3A4A7 /* NewsPlace */ = {
+			isa = PBXGroup;
+			children = (
+				F6CE083818EF1AA600BA4011 /* Utils */,
+				F63E2C9718E59EC300E3A4A7 /* View */,
+				F63E2C9318E59E3500E3A4A7 /* Controller */,
+				F63E2C8F18E59A8000E3A4A7 /* Model */,
+				F63E2C8B18E598AD00E3A4A7 /* Networking */,
+				F63E2C6718E5972800E3A4A7 /* NPAppDelegate.h */,
+				F63E2C6818E5972800E3A4A7 /* NPAppDelegate.m */,
+				F63E2C6D18E5972800E3A4A7 /* Images.xcassets */,
+				F63E2C6A18E5972800E3A4A7 /* NewsPlace.xcdatamodeld */,
+				F63E2C5F18E5972800E3A4A7 /* Supporting Files */,
+			);
+			path = NewsPlace;
+			sourceTree = "<group>";
+		};
+		F63E2C5F18E5972800E3A4A7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7FACC9CB18F17D16004FCE04 /* HTMLBase.html */,
+				7FACC9CC18F17D16004FCE04 /* javascript.js */,
+				F63E2C6018E5972800E3A4A7 /* NewsPlace-Info.plist */,
+				F63E2C6118E5972800E3A4A7 /* InfoPlist.strings */,
+				F63E2C6418E5972800E3A4A7 /* main.m */,
+				F63E2C6618E5972800E3A4A7 /* NewsPlace-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F63E2C7B18E5972800E3A4A7 /* NewsPlaceTests */ = {
+			isa = PBXGroup;
+			children = (
+				F63E2C8118E5972800E3A4A7 /* NewsPlaceTests.m */,
+				F63E2C7C18E5972800E3A4A7 /* Supporting Files */,
+			);
+			path = NewsPlaceTests;
+			sourceTree = "<group>";
+		};
+		F63E2C7C18E5972800E3A4A7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F63E2C7D18E5972800E3A4A7 /* NewsPlaceTests-Info.plist */,
+				F63E2C7E18E5972800E3A4A7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F63E2C8B18E598AD00E3A4A7 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F63E2C8C18E5997600E3A4A7 /* NPAAPIClient.h */,
+				F63E2C8D18E5997600E3A4A7 /* NPAAPIClient.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		F63E2C8F18E59A8000E3A4A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7F4D276318ED34D000FEFC56 /* NPDataLoader.h */,
+				7F4D276418ED34D000FEFC56 /* NPDataLoader.m */,
+				7F4D276018EC983B00FEFC56 /* Article.h */,
+				7F4D276118EC983B00FEFC56 /* Article.m */,
+				7FACC9BF18F14C66004FCE04 /* ArticleSource.h */,
+				7FACC9C018F14C66004FCE04 /* ArticleSource.m */,
+				F6AA401018F42BCF003940A6 /* ArticleCategory.h */,
+				F6AA401118F42BCF003940A6 /* ArticleCategory.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F63E2C9318E59E3500E3A4A7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7FACC9C518F17ABA004FCE04 /* SNArticleViewController.h */,
+				7FACC9C618F17ABA004FCE04 /* SNArticleViewController.m */,
+				F63E2C9D18E59F3200E3A4A7 /* NPHighlightsViewController.h */,
+				F63E2C9E18E59F3200E3A4A7 /* NPHighlightsViewController.m */,
+				7FACC9D318F1BFB1004FCE04 /* NPSideMenuViewController.h */,
+				7FACC9D418F1BFB1004FCE04 /* NPSideMenuViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F63E2C9718E59EC300E3A4A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7FACC9C218F16EEC004FCE04 /* SNHeadlineTableViewCell.h */,
+				7FACC9C318F16EEC004FCE04 /* SNHeadlineTableViewCell.m */,
+				F63E2C9818E59ED700E3A4A7 /* Storyboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F6CE083818EF1AA600BA4011 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7FACC9C818F17C30004FCE04 /* NSString+JSONString.h */,
+				7FACC9C918F17C30004FCE04 /* NSString+JSONString.m */,
+				F6CE083218EF1A4000BA4011 /* NSManagedObject+Fetching.h */,
+				F6CE083318EF1A4000BA4011 /* NSManagedObject+Fetching.m */,
+				F6CE083418EF1A4000BA4011 /* NSManagedObject+JSONMapping.h */,
+				F6CE083518EF1A4000BA4011 /* NSManagedObject+JSONMapping.m */,
+				F6CE083918EF1B5000BA4011 /* NPDateParser.h */,
+				F6CE083A18EF1B5000BA4011 /* NPDateParser.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F63E2C5218E5972800E3A4A7 /* NewsPlace */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F63E2C8518E5972800E3A4A7 /* Build configuration list for PBXNativeTarget "NewsPlace" */;
+			buildPhases = (
+				07FEC8653BA644FF956B19FD /* Check Pods Manifest.lock */,
+				F63E2C4F18E5972800E3A4A7 /* Sources */,
+				F63E2C5018E5972800E3A4A7 /* Frameworks */,
+				F63E2C5118E5972800E3A4A7 /* Resources */,
+				3424607E09B54DB689C304FD /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NewsPlace;
+			productName = NewsPlace;
+			productReference = F63E2C5318E5972800E3A4A7 /* NewsPlace.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F63E2C7218E5972800E3A4A7 /* NewsPlaceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F63E2C8818E5972800E3A4A7 /* Build configuration list for PBXNativeTarget "NewsPlaceTests" */;
+			buildPhases = (
+				F63E2C6F18E5972800E3A4A7 /* Sources */,
+				F63E2C7018E5972800E3A4A7 /* Frameworks */,
+				F63E2C7118E5972800E3A4A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F63E2C7A18E5972800E3A4A7 /* PBXTargetDependency */,
+			);
+			name = NewsPlaceTests;
+			productName = NewsPlaceTests;
+			productReference = F63E2C7318E5972800E3A4A7 /* NewsPlaceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F63E2C4B18E5972800E3A4A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NP;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Ostap Horbach";
+				TargetAttributes = {
+					F63E2C7218E5972800E3A4A7 = {
+						TestTargetID = F63E2C5218E5972800E3A4A7;
+					};
+				};
+			};
+			buildConfigurationList = F63E2C4E18E5972800E3A4A7 /* Build configuration list for PBXProject "NewsPlace" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F63E2C4A18E5972800E3A4A7;
+			productRefGroup = F63E2C5418E5972800E3A4A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F63E2C5218E5972800E3A4A7 /* NewsPlace */,
+				F63E2C7218E5972800E3A4A7 /* NewsPlaceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F63E2C5118E5972800E3A4A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FACC9CF18F17D38004FCE04 /* javascript.js in Resources */,
+				7FACC9CD18F17D16004FCE04 /* HTMLBase.html in Resources */,
+				F63E2C6318E5972800E3A4A7 /* InfoPlist.strings in Resources */,
+				F63E2C6E18E5972800E3A4A7 /* Images.xcassets in Resources */,
+				F63E2C9918E59ED700E3A4A7 /* Storyboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F63E2C7118E5972800E3A4A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F63E2C8018E5972800E3A4A7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07FEC8653BA644FF956B19FD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3424607E09B54DB689C304FD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F63E2C4F18E5972800E3A4A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F4D276518ED34D000FEFC56 /* NPDataLoader.m in Sources */,
+				F63E2C6918E5972800E3A4A7 /* NPAppDelegate.m in Sources */,
+				F63E2C8E18E5997600E3A4A7 /* NPAAPIClient.m in Sources */,
+				7FACC9C118F14C66004FCE04 /* ArticleSource.m in Sources */,
+				7FACC9C718F17ABA004FCE04 /* SNArticleViewController.m in Sources */,
+				F6AA401218F42BCF003940A6 /* ArticleCategory.m in Sources */,
+				F6CE083B18EF1B5000BA4011 /* NPDateParser.m in Sources */,
+				7FACC9C418F16EEC004FCE04 /* SNHeadlineTableViewCell.m in Sources */,
+				7F4D276218EC983B00FEFC56 /* Article.m in Sources */,
+				F6CE083718EF1A4000BA4011 /* NSManagedObject+JSONMapping.m in Sources */,
+				F63E2C6C18E5972800E3A4A7 /* NewsPlace.xcdatamodeld in Sources */,
+				F63E2C9F18E59F3200E3A4A7 /* NPHighlightsViewController.m in Sources */,
+				F63E2C6518E5972800E3A4A7 /* main.m in Sources */,
+				7FACC9D518F1BFB1004FCE04 /* NPSideMenuViewController.m in Sources */,
+				7FACC9CA18F17C30004FCE04 /* NSString+JSONString.m in Sources */,
+				F6CE083618EF1A4000BA4011 /* NSManagedObject+Fetching.m in Sources */,
+				7FACC9CE18F17D16004FCE04 /* javascript.js in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F63E2C6F18E5972800E3A4A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F63E2C8218E5972800E3A4A7 /* NewsPlaceTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F63E2C7A18E5972800E3A4A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F63E2C5218E5972800E3A4A7 /* NewsPlace */;
+			targetProxy = F63E2C7918E5972800E3A4A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F63E2C6118E5972800E3A4A7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F63E2C6218E5972800E3A4A7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F63E2C7E18E5972800E3A4A7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F63E2C7F18E5972800E3A4A7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F63E2C8318E5972800E3A4A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F63E2C8418E5972800E3A4A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F63E2C8618E5972800E3A4A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F5001534F134F80B0C69A03 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NewsPlace/NewsPlace-Prefix.pch";
+				INFOPLIST_FILE = "NewsPlace/NewsPlace-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F63E2C8718E5972800E3A4A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F5001534F134F80B0C69A03 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NewsPlace/NewsPlace-Prefix.pch";
+				INFOPLIST_FILE = "NewsPlace/NewsPlace-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F63E2C8918E5972800E3A4A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NewsPlace.app/NewsPlace";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NewsPlace/NewsPlace-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NewsPlaceTests/NewsPlaceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F63E2C8A18E5972800E3A4A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NewsPlace.app/NewsPlace";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NewsPlace/NewsPlace-Prefix.pch";
+				INFOPLIST_FILE = "NewsPlaceTests/NewsPlaceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F63E2C4E18E5972800E3A4A7 /* Build configuration list for PBXProject "NewsPlace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F63E2C8318E5972800E3A4A7 /* Debug */,
+				F63E2C8418E5972800E3A4A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F63E2C8518E5972800E3A4A7 /* Build configuration list for PBXNativeTarget "NewsPlace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F63E2C8618E5972800E3A4A7 /* Debug */,
+				F63E2C8718E5972800E3A4A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F63E2C8818E5972800E3A4A7 /* Build configuration list for PBXNativeTarget "NewsPlaceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F63E2C8918E5972800E3A4A7 /* Debug */,
+				F63E2C8A18E5972800E3A4A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F63E2C6A18E5972800E3A4A7 /* NewsPlace.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F63E2C6B18E5972800E3A4A7 /* NewsPlace.xcdatamodel */,
+			);
+			currentVersion = F63E2C6B18E5972800E3A4A7 /* NewsPlace.xcdatamodel */;
+			path = NewsPlace.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F63E2C4B18E5972800E3A4A7 /* Project object */;
+}
