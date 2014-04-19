@@ -10,7 +10,9 @@
 		0C0D9E5476C14D34AD992598 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20DFB513FD634152B44C2B25 /* libPods.a */; };
 		7F4D276218EC983B00FEFC56 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D276118EC983B00FEFC56 /* Article.m */; };
 		7F4D276518ED34D000FEFC56 /* NPDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D276418ED34D000FEFC56 /* NPDataLoader.m */; };
-		7FACC9C118F14C66004FCE04 /* ArticleSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC9C018F14C66004FCE04 /* ArticleSource.m */; };
+		7FA8AF8F19028615003EAEE3 /* NPSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA8AF8E19028615003EAEE3 /* NPSettingsViewController.m */; };
+		7FA8AF9519028877003EAEE3 /* ArticleSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA8AF9419028877003EAEE3 /* ArticleSource.m */; };
+		7FA8AF9819028CF4003EAEE3 /* NPSourceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA8AF9719028CF4003EAEE3 /* NPSourceTableViewCell.m */; };
 		7FACC9C418F16EEC004FCE04 /* SNHeadlineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC9C318F16EEC004FCE04 /* SNHeadlineTableViewCell.m */; };
 		7FACC9C718F17ABA004FCE04 /* SNArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC9C618F17ABA004FCE04 /* SNArticleViewController.m */; };
 		7FACC9CA18F17C30004FCE04 /* NSString+JSONString.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC9C918F17C30004FCE04 /* NSString+JSONString.m */; };
@@ -58,8 +60,12 @@
 		7F4D276118EC983B00FEFC56 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Article.m; sourceTree = "<group>"; };
 		7F4D276318ED34D000FEFC56 /* NPDataLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NPDataLoader.h; path = ../Controller/NPDataLoader.h; sourceTree = "<group>"; };
 		7F4D276418ED34D000FEFC56 /* NPDataLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NPDataLoader.m; path = ../Controller/NPDataLoader.m; sourceTree = "<group>"; };
-		7FACC9BF18F14C66004FCE04 /* ArticleSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleSource.h; sourceTree = "<group>"; };
-		7FACC9C018F14C66004FCE04 /* ArticleSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleSource.m; sourceTree = "<group>"; };
+		7FA8AF8D19028615003EAEE3 /* NPSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPSettingsViewController.h; sourceTree = "<group>"; };
+		7FA8AF8E19028615003EAEE3 /* NPSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPSettingsViewController.m; sourceTree = "<group>"; };
+		7FA8AF9319028877003EAEE3 /* ArticleSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleSource.h; sourceTree = "<group>"; };
+		7FA8AF9419028877003EAEE3 /* ArticleSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleSource.m; sourceTree = "<group>"; };
+		7FA8AF9619028CF4003EAEE3 /* NPSourceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPSourceTableViewCell.h; sourceTree = "<group>"; };
+		7FA8AF9719028CF4003EAEE3 /* NPSourceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPSourceTableViewCell.m; sourceTree = "<group>"; };
 		7FACC9C218F16EEC004FCE04 /* SNHeadlineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNHeadlineTableViewCell.h; sourceTree = "<group>"; };
 		7FACC9C318F16EEC004FCE04 /* SNHeadlineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNHeadlineTableViewCell.m; sourceTree = "<group>"; };
 		7FACC9C518F17ABA004FCE04 /* SNArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNArticleViewController.h; sourceTree = "<group>"; };
@@ -175,7 +181,6 @@
 				F63E2C6718E5972800E3A4A7 /* NPAppDelegate.h */,
 				F63E2C6818E5972800E3A4A7 /* NPAppDelegate.m */,
 				F63E2C6D18E5972800E3A4A7 /* Images.xcassets */,
-				F63E2C6A18E5972800E3A4A7 /* NewsPlace.xcdatamodeld */,
 				F63E2C5F18E5972800E3A4A7 /* Supporting Files */,
 			);
 			path = NewsPlace;
@@ -215,6 +220,8 @@
 		F63E2C8B18E598AD00E3A4A7 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				7F4D276318ED34D000FEFC56 /* NPDataLoader.h */,
+				7F4D276418ED34D000FEFC56 /* NPDataLoader.m */,
 				F63E2C8C18E5997600E3A4A7 /* NPAAPIClient.h */,
 				F63E2C8D18E5997600E3A4A7 /* NPAAPIClient.m */,
 			);
@@ -224,12 +231,11 @@
 		F63E2C8F18E59A8000E3A4A7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7F4D276318ED34D000FEFC56 /* NPDataLoader.h */,
-				7F4D276418ED34D000FEFC56 /* NPDataLoader.m */,
+				7FA8AF9319028877003EAEE3 /* ArticleSource.h */,
+				7FA8AF9419028877003EAEE3 /* ArticleSource.m */,
+				F63E2C6A18E5972800E3A4A7 /* NewsPlace.xcdatamodeld */,
 				7F4D276018EC983B00FEFC56 /* Article.h */,
 				7F4D276118EC983B00FEFC56 /* Article.m */,
-				7FACC9BF18F14C66004FCE04 /* ArticleSource.h */,
-				7FACC9C018F14C66004FCE04 /* ArticleSource.m */,
 				F6AA401018F42BCF003940A6 /* ArticleCategory.h */,
 				F6AA401118F42BCF003940A6 /* ArticleCategory.m */,
 			);
@@ -245,6 +251,8 @@
 				F63E2C9E18E59F3200E3A4A7 /* NPHighlightsViewController.m */,
 				7FACC9D318F1BFB1004FCE04 /* NPSideMenuViewController.h */,
 				7FACC9D418F1BFB1004FCE04 /* NPSideMenuViewController.m */,
+				7FA8AF8D19028615003EAEE3 /* NPSettingsViewController.h */,
+				7FA8AF8E19028615003EAEE3 /* NPSettingsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -255,6 +263,8 @@
 				7FACC9C218F16EEC004FCE04 /* SNHeadlineTableViewCell.h */,
 				7FACC9C318F16EEC004FCE04 /* SNHeadlineTableViewCell.m */,
 				F63E2C9818E59ED700E3A4A7 /* Storyboard.storyboard */,
+				7FA8AF9619028CF4003EAEE3 /* NPSourceTableViewCell.h */,
+				7FA8AF9719028CF4003EAEE3 /* NPSourceTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -410,8 +420,9 @@
 			files = (
 				7F4D276518ED34D000FEFC56 /* NPDataLoader.m in Sources */,
 				F63E2C6918E5972800E3A4A7 /* NPAppDelegate.m in Sources */,
+				7FA8AF9819028CF4003EAEE3 /* NPSourceTableViewCell.m in Sources */,
 				F63E2C8E18E5997600E3A4A7 /* NPAAPIClient.m in Sources */,
-				7FACC9C118F14C66004FCE04 /* ArticleSource.m in Sources */,
+				7FA8AF9519028877003EAEE3 /* ArticleSource.m in Sources */,
 				7FACC9C718F17ABA004FCE04 /* SNArticleViewController.m in Sources */,
 				F6AA401218F42BCF003940A6 /* ArticleCategory.m in Sources */,
 				F6CE083B18EF1B5000BA4011 /* NPDateParser.m in Sources */,
@@ -421,6 +432,7 @@
 				F63E2C6C18E5972800E3A4A7 /* NewsPlace.xcdatamodeld in Sources */,
 				F63E2C9F18E59F3200E3A4A7 /* NPHighlightsViewController.m in Sources */,
 				F63E2C6518E5972800E3A4A7 /* main.m in Sources */,
+				7FA8AF8F19028615003EAEE3 /* NPSettingsViewController.m in Sources */,
 				7FACC9D518F1BFB1004FCE04 /* NPSideMenuViewController.m in Sources */,
 				7FACC9CA18F17C30004FCE04 /* NSString+JSONString.m in Sources */,
 				F6CE083618EF1A4000BA4011 /* NSManagedObject+Fetching.m in Sources */,
@@ -545,6 +557,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NewsPlace/NewsPlace-Prefix.pch";
 				INFOPLIST_FILE = "NewsPlace/NewsPlace-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -559,6 +572,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NewsPlace/NewsPlace-Prefix.pch";
 				INFOPLIST_FILE = "NewsPlace/NewsPlace-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -643,7 +657,8 @@
 				F63E2C6B18E5972800E3A4A7 /* NewsPlace.xcdatamodel */,
 			);
 			currentVersion = F63E2C6B18E5972800E3A4A7 /* NewsPlace.xcdatamodel */;
-			path = NewsPlace.xcdatamodeld;
+			name = NewsPlace.xcdatamodeld;
+			path = ../NewsPlace.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

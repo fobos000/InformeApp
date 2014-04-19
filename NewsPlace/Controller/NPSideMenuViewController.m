@@ -10,6 +10,7 @@
 #import "NSManagedObject+Fetching.h"
 #import "ArticleSource.h"
 #import "ArticleCategory.h"
+#import "NPSettingsViewController.h"
 
 typedef enum {
     SideMenuSectionCategory,
@@ -176,6 +177,23 @@ typedef enum {
     
     [self.delegate sideMenuDidSelectCategory:self.categories[indexPath.row]];
 }
+
+#pragma mark - Segues
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"SettingsSegue"]) {
+        UINavigationController *nc = segue.destinationViewController;
+        NPSettingsViewController *settingsVC = (NPSettingsViewController *)nc.topViewController;
+        settingsVC.context = self.context;
+    }
+}
+
+- (IBAction)unwindFromSettings:(UIStoryboardSegue *)unwindSegue
+{
+    
+}
+
 
 /*
 // Override to support conditional editing of the table view.

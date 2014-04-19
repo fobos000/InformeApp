@@ -15,6 +15,7 @@
 
 @dynamic serverId;
 @dynamic name;
+@dynamic active;
 
 + (NSString *)idProperty
 {

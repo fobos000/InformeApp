@@ -14,5 +14,6 @@
 
 @property (nonatomic, retain) NSNumber * serverId;
 @property (nonatomic, retain) NSString * name;
+@property (nonatomic) BOOL active;
 
 @end
