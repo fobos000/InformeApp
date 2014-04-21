@@ -40,12 +40,6 @@ typedef enum {
 {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(updatedContext)
                                                  name:NSManagedObjectContextDidSaveNotification
@@ -160,7 +154,7 @@ typedef enum {
             [self selectCategoryAtIndexPath:indexPath];
             break;
         case SideMenuSectionSource:
-            [self.delegate sideMenuDidSelectSource:self.sources[indexPath.row]];
+            [self.delegate sideMenuDidSelectSources:self.sources];
             break;
             
         default:

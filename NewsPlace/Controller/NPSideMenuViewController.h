@@ -15,7 +15,7 @@
 
 @optional
 - (void)sideMenuDidSelectCategory:(ArticleCategory *)articleCategory;
-- (void)sideMenuDidSelectSource:(ArticleSource *)articleSource;
+- (void)sideMenuDidSelectSources:(NSArray *)articleSources;
 
 @end
 

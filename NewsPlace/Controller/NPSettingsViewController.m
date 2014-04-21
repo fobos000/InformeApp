@@ -10,6 +10,7 @@
 #import "ArticleSource.h"
 #import "NPSourceTableViewCell.h"
 #import "NSManagedObject+Fetching.h"
+#import "NPNotifications.h"
 
 @interface NPSettingsViewController ()
 
@@ -129,6 +130,8 @@
     if ([segue.identifier isEqualToString:@"UnwindSettingsSegue"]) {
         if (self.context.hasChanges) {
             [self.context save:nil];
+            [[NSNotificationCenter defaultCenter]
+             postNotificationName:kSettingsUpdatedNotification object:nil];
         }
     }
 }

@@ -16,6 +16,9 @@
 #import "SNHeadlineTableViewCell.h"
 #import "Article.h"
 #import "ArticleCategory.h"
+#import "ArticleSource.h"
+#import "NPNotifications.h"
+#import "NSManagedObject+Fetching.h"
 
 static int categoryContext;
 static int sourcesContext;
@@ -45,6 +48,14 @@ static int sourcesContext;
 {
     [super viewDidLoad];
     
+    [[NSNotificationCenter defaultCenter] addObserverForName:kSettingsUpdatedNotification
+                                                      object:nil
+                                                       queue:[NSOperationQueue mainQueue]
+                                                  usingBlock:^(NSNotification *note) {
+                                                      [self prepareFetchResultsController];
+                                                      [self.tableView reloadData];
+                                                  }];
+    
     [self addObserver:self forKeyPath:NSStringFromSelector(@selector(category))
               options:0 context:&categoryContext];
     [self addObserver:self forKeyPath:NSStringFromSelector(@selector(sources))
@@ -60,7 +71,6 @@ static int sourcesContext;
                 action:@selector(refresh)
       forControlEvents:UIControlEventValueChanged];
     
-    
     self.refreshControl = refresh;
 }
 
@@ -71,10 +81,12 @@ static int sourcesContext;
     
     NSPredicate *pr;
     
-    NSPredicate *sourcesPred = nil;
-    if (self.sources) {
-        sourcesPred = [NSPredicate predicateWithFormat:@"sourceId in %@", [self.sources valueForKey:@"serverId"]];
-    }
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"active = 1"];
+    NSArray *articleSources = [ArticleSource objectsWithPredicate:predicate
+                                                  sortDescriptors:nil
+                                                        inContext:self.context];
+    NSPredicate *sourcesPred = [NSPredicate predicateWithFormat:@"sourceId in %@", [articleSources valueForKey:@"serverId"]];
+    
     
     NSPredicate *categoryPred = nil;
     if (self.category) {
@@ -108,6 +120,11 @@ static int sourcesContext;
     self.frc.fetchRequest.predicate = pr;
     [self.frc performFetch:nil];
 }
+
+//- (void)prepareSourcesFetchedResultsController
+//{
+//    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] ini]
+//}
 
 - (void)refresh
 {
@@ -274,10 +291,10 @@ static int sourcesContext;
     }];
 }
 
-- (void)sideMenuDidSelectSource:(ArticleSource *)articleSource
+- (void)sideMenuDidSelectSources:(NSArray *)articleSources
 {
     [self.menuContainerViewController toggleLeftSideMenuCompletion:^{
-        self.sources = @[articleSource];
+        self.sources = articleSources;
     }];
 }
 

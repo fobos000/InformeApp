@@ -13,6 +13,7 @@
 		7FA8AF8F19028615003EAEE3 /* NPSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA8AF8E19028615003EAEE3 /* NPSettingsViewController.m */; };
 		7FA8AF9519028877003EAEE3 /* ArticleSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA8AF9419028877003EAEE3 /* ArticleSource.m */; };
 		7FA8AF9819028CF4003EAEE3 /* NPSourceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA8AF9719028CF4003EAEE3 /* NPSourceTableViewCell.m */; };
+		7FA8AF9B19031634003EAEE3 /* NPNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA8AF9A19031634003EAEE3 /* NPNotifications.m */; };
 		7FACC9C418F16EEC004FCE04 /* SNHeadlineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC9C318F16EEC004FCE04 /* SNHeadlineTableViewCell.m */; };
 		7FACC9C718F17ABA004FCE04 /* SNArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC9C618F17ABA004FCE04 /* SNArticleViewController.m */; };
 		7FACC9CA18F17C30004FCE04 /* NSString+JSONString.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC9C918F17C30004FCE04 /* NSString+JSONString.m */; };
@@ -66,6 +67,8 @@
 		7FA8AF9419028877003EAEE3 /* ArticleSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleSource.m; sourceTree = "<group>"; };
 		7FA8AF9619028CF4003EAEE3 /* NPSourceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPSourceTableViewCell.h; sourceTree = "<group>"; };
 		7FA8AF9719028CF4003EAEE3 /* NPSourceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPSourceTableViewCell.m; sourceTree = "<group>"; };
+		7FA8AF9919031634003EAEE3 /* NPNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPNotifications.h; sourceTree = "<group>"; };
+		7FA8AF9A19031634003EAEE3 /* NPNotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPNotifications.m; sourceTree = "<group>"; };
 		7FACC9C218F16EEC004FCE04 /* SNHeadlineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNHeadlineTableViewCell.h; sourceTree = "<group>"; };
 		7FACC9C318F16EEC004FCE04 /* SNHeadlineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNHeadlineTableViewCell.m; sourceTree = "<group>"; };
 		7FACC9C518F17ABA004FCE04 /* SNArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNArticleViewController.h; sourceTree = "<group>"; };
@@ -180,6 +183,8 @@
 				F63E2C8B18E598AD00E3A4A7 /* Networking */,
 				F63E2C6718E5972800E3A4A7 /* NPAppDelegate.h */,
 				F63E2C6818E5972800E3A4A7 /* NPAppDelegate.m */,
+				7FA8AF9919031634003EAEE3 /* NPNotifications.h */,
+				7FA8AF9A19031634003EAEE3 /* NPNotifications.m */,
 				F63E2C6D18E5972800E3A4A7 /* Images.xcassets */,
 				F63E2C5F18E5972800E3A4A7 /* Supporting Files */,
 			);
@@ -418,6 +423,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FA8AF9B19031634003EAEE3 /* NPNotifications.m in Sources */,
 				7F4D276518ED34D000FEFC56 /* NPDataLoader.m in Sources */,
 				F63E2C6918E5972800E3A4A7 /* NPAppDelegate.m in Sources */,
 				7FA8AF9819028CF4003EAEE3 /* NPSourceTableViewCell.m in Sources */,
