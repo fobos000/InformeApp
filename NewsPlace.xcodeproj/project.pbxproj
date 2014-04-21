@@ -21,6 +21,7 @@
 		7FACC9CE18F17D16004FCE04 /* javascript.js in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC9CC18F17D16004FCE04 /* javascript.js */; };
 		7FACC9CF18F17D38004FCE04 /* javascript.js in Resources */ = {isa = PBXBuildFile; fileRef = 7FACC9CC18F17D16004FCE04 /* javascript.js */; };
 		7FACC9D518F1BFB1004FCE04 /* NPSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC9D418F1BFB1004FCE04 /* NPSideMenuViewController.m */; };
+		7FE736741905BAF5007BF363 /* seed.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7FE736731905BA09007BF363 /* seed.sqlite */; };
 		F63E2C5718E5972800E3A4A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63E2C5618E5972800E3A4A7 /* Foundation.framework */; };
 		F63E2C5918E5972800E3A4A7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63E2C5818E5972800E3A4A7 /* CoreGraphics.framework */; };
 		F63E2C5B18E5972800E3A4A7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63E2C5A18E5972800E3A4A7 /* UIKit.framework */; };
@@ -79,6 +80,7 @@
 		7FACC9CC18F17D16004FCE04 /* javascript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = javascript.js; sourceTree = "<group>"; };
 		7FACC9D318F1BFB1004FCE04 /* NPSideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPSideMenuViewController.h; sourceTree = "<group>"; };
 		7FACC9D418F1BFB1004FCE04 /* NPSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPSideMenuViewController.m; sourceTree = "<group>"; };
+		7FE736731905BA09007BF363 /* seed.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = seed.sqlite; sourceTree = "<group>"; };
 		8F5001534F134F80B0C69A03 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		F63E2C5318E5972800E3A4A7 /* NewsPlace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsPlace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F63E2C5618E5972800E3A4A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -194,6 +196,7 @@
 		F63E2C5F18E5972800E3A4A7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7FE736731905BA09007BF363 /* seed.sqlite */,
 				7FACC9CB18F17D16004FCE04 /* HTMLBase.html */,
 				7FACC9CC18F17D16004FCE04 /* javascript.js */,
 				F63E2C6018E5972800E3A4A7 /* NewsPlace-Info.plist */,
@@ -236,9 +239,9 @@
 		F63E2C8F18E59A8000E3A4A7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F63E2C6A18E5972800E3A4A7 /* NewsPlace.xcdatamodeld */,
 				7FA8AF9319028877003EAEE3 /* ArticleSource.h */,
 				7FA8AF9419028877003EAEE3 /* ArticleSource.m */,
-				F63E2C6A18E5972800E3A4A7 /* NewsPlace.xcdatamodeld */,
 				7F4D276018EC983B00FEFC56 /* Article.h */,
 				7F4D276118EC983B00FEFC56 /* Article.m */,
 				F6AA401018F42BCF003940A6 /* ArticleCategory.h */,
@@ -367,6 +370,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FE736741905BAF5007BF363 /* seed.sqlite in Resources */,
 				7FACC9CF18F17D38004FCE04 /* javascript.js in Resources */,
 				7FACC9CD18F17D16004FCE04 /* HTMLBase.html in Resources */,
 				F63E2C6318E5972800E3A4A7 /* InfoPlist.strings in Resources */,

@@ -19,6 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [self setupPrepopulatedDB];
+    
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:[NSBundle mainBundle]];
     MFSideMenuContainerViewController *container = (MFSideMenuContainerViewController *)self.window.rootViewController;
     UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"navigationController"];
@@ -118,7 +120,7 @@
         return _persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"NewsPlace.sqlite"];
+    NSURL *storeURL = [self storeURL];
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
@@ -151,6 +153,51 @@
     }    
     
     return _persistentStoreCoordinator;
+}
+
+#pragma mark - Prepopulated DB
+
+- (void)setupPrepopulatedDB
+{
+    NSDictionary *infoDictionary = [NSBundle mainBundle].infoDictionary;
+    NSString* bundleVersion = [infoDictionary objectForKey:(NSString *)kCFBundleVersionKey];
+    NSString *seedVersion = [[NSUserDefaults standardUserDefaults] objectForKey:@"SeedVersion"];
+    if (![seedVersion isEqualToString:bundleVersion]) {
+        NSFileManager* fileManager = [NSFileManager defaultManager];
+        NSError *error;
+        
+        if([fileManager fileExistsAtPath:self.storeURL.path]) {
+            NSURL *storeDirectory = [self.storeURL URLByDeletingLastPathComponent];
+            NSDirectoryEnumerator *enumerator = [fileManager enumeratorAtURL:storeDirectory
+                                                  includingPropertiesForKeys:nil
+                                                                     options:0
+                                                                errorHandler:NULL];
+            NSString *storeName = [self.storeURL.lastPathComponent stringByDeletingPathExtension];
+            for (NSURL *url in enumerator) {
+                if (![url.lastPathComponent hasPrefix:storeName]) continue;
+                [fileManager removeItemAtURL:url error:&error];
+            }
+            // handle error
+        }
+        
+        NSString* bundleDbPath = [[NSBundle mainBundle] pathForResource:@"seed" ofType:@"sqlite"];
+        [fileManager copyItemAtPath:bundleDbPath toPath:self.storeURL.path error:&error];
+    }
+    
+    // ... after the import succeeded
+    [[NSUserDefaults standardUserDefaults] setObject:bundleVersion forKey:@"SeedVersion"];
+}
+
+#pragma mark - Store paths
+
+- (NSURL *)storeURL
+{
+    return [[self storeDirectory] URLByAppendingPathComponent:@"NewsPlace.sqlite"];
+}
+
+- (NSURL *)storeDirectory
+{
+    return [self applicationDocumentsDirectory];
 }
 
 #pragma mark - Application's Documents directory
