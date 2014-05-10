@@ -24,6 +24,7 @@
 		7FCC9DE7190B6F1A00966984 /* NewsPlace.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7FCC9DE4190B6C6D00966984 /* NewsPlace.sqlite */; };
 		7FCC9DE8190B6F1A00966984 /* NewsPlace.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 7FCC9DE5190B6C6D00966984 /* NewsPlace.sqlite-shm */; };
 		7FCC9DE9190B6F1A00966984 /* NewsPlace.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 7FCC9DE6190B6C6D00966984 /* NewsPlace.sqlite-wal */; };
+		7FCC9DEF191E4DBE00966984 /* NPEmptyTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC9DEE191E4DBE00966984 /* NPEmptyTableDataSource.m */; };
 		F63E2C5718E5972800E3A4A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63E2C5618E5972800E3A4A7 /* Foundation.framework */; };
 		F63E2C5918E5972800E3A4A7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63E2C5818E5972800E3A4A7 /* CoreGraphics.framework */; };
 		F63E2C5B18E5972800E3A4A7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63E2C5A18E5972800E3A4A7 /* UIKit.framework */; };
@@ -85,6 +86,8 @@
 		7FCC9DE4190B6C6D00966984 /* NewsPlace.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewsPlace.sqlite; sourceTree = "<group>"; };
 		7FCC9DE5190B6C6D00966984 /* NewsPlace.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewsPlace.sqlite-shm"; sourceTree = "<group>"; };
 		7FCC9DE6190B6C6D00966984 /* NewsPlace.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewsPlace.sqlite-wal"; sourceTree = "<group>"; };
+		7FCC9DED191E4DBE00966984 /* NPEmptyTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPEmptyTableDataSource.h; sourceTree = "<group>"; };
+		7FCC9DEE191E4DBE00966984 /* NPEmptyTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPEmptyTableDataSource.m; sourceTree = "<group>"; };
 		8F5001534F134F80B0C69A03 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		F63E2C5318E5972800E3A4A7 /* NewsPlace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsPlace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F63E2C5618E5972800E3A4A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -252,6 +255,8 @@
 				7F4D276118EC983B00FEFC56 /* Article.m */,
 				F6AA401018F42BCF003940A6 /* ArticleCategory.h */,
 				F6AA401118F42BCF003940A6 /* ArticleCategory.m */,
+				7FCC9DED191E4DBE00966984 /* NPEmptyTableDataSource.h */,
+				7FCC9DEE191E4DBE00966984 /* NPEmptyTableDataSource.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -440,6 +445,7 @@
 				F63E2C6918E5972800E3A4A7 /* NPAppDelegate.m in Sources */,
 				7FA8AF9819028CF4003EAEE3 /* NPSourceTableViewCell.m in Sources */,
 				F63E2C8E18E5997600E3A4A7 /* NPAAPIClient.m in Sources */,
+				7FCC9DEF191E4DBE00966984 /* NPEmptyTableDataSource.m in Sources */,
 				7FA8AF9519028877003EAEE3 /* ArticleSource.m in Sources */,
 				7FACC9C718F17ABA004FCE04 /* SNArticleViewController.m in Sources */,
 				F6AA401218F42BCF003940A6 /* ArticleCategory.m in Sources */,

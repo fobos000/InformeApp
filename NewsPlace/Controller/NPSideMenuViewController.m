@@ -14,7 +14,6 @@
 
 typedef enum {
     SideMenuSectionCategory,
-    SideMenuSectionSource,
     SideMenuSectionMax
 } SideMenuSection;
 
@@ -83,9 +82,6 @@ typedef enum {
         case SideMenuSectionCategory:
             return self.categories.count;
             break;
-        case SideMenuSectionSource:
-            return self.sources.count;
-            break;
         default:
             break;
     }
@@ -120,31 +116,11 @@ typedef enum {
                                                    forIndexPath:indexPath];
             [self configureCategoryCell:cell atIndexPath:indexPath];
             break;
-        case SideMenuSectionSource:
-            cell = [tableView dequeueReusableCellWithIdentifier:@"SourceCell"
-                                                   forIndexPath:indexPath];
-            [self configureSourceCell:cell atIndexPath:indexPath];
-            break;
         default:
             break;
     }
     
     return cell;
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    switch (section) {
-        case SideMenuSectionCategory:
-            return NSLocalizedString(@"Categories", nil);
-            break;
-        case SideMenuSectionSource:
-            return NSLocalizedString(@"Sources", nil);
-            break;
-        default:
-            break;
-    }
-    return nil;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -153,10 +129,6 @@ typedef enum {
         case SideMenuSectionCategory:
             [self selectCategoryAtIndexPath:indexPath];
             break;
-        case SideMenuSectionSource:
-            [self.delegate sideMenuDidSelectSources:self.sources];
-            break;
-            
         default:
             break;
     }
