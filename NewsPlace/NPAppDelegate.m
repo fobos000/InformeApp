@@ -180,8 +180,14 @@
             // handle error
         }
         
-        NSString* bundleDbPath = [[NSBundle mainBundle] pathForResource:@"seed" ofType:@"sqlite"];
+        NSString* bundleDbPath = [[NSBundle mainBundle] pathForResource:@"NewsPlace" ofType:@"sqlite"];
         [fileManager copyItemAtPath:bundleDbPath toPath:self.storeURL.path error:&error];
+        
+        NSString* bundleDbPathShm = [[NSBundle mainBundle] pathForResource:@"NewsPlace" ofType:@"sqlite-shm"];
+        [fileManager copyItemAtPath:bundleDbPathShm toPath:self.storeShmURL.path error:&error];
+        
+        NSString* bundleDbPathWal = [[NSBundle mainBundle] pathForResource:@"NewsPlace" ofType:@"sqlite-wal"];
+        [fileManager copyItemAtPath:bundleDbPathWal toPath:self.storeWalURL.path error:&error];
     }
     
     // ... after the import succeeded
@@ -189,6 +195,17 @@
 }
 
 #pragma mark - Store paths
+
+- (NSURL *)storeShmURL
+{
+    return [[self storeDirectory] URLByAppendingPathComponent:@"NewsPlace.sqlite-shm"];
+}
+
+- (NSURL *)storeWalURL
+{
+    return [[self storeDirectory] URLByAppendingPathComponent:@"NewsPlace.sqlite-wal"];
+}
+
 
 - (NSURL *)storeURL
 {

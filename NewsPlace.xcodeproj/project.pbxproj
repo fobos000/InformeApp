@@ -21,7 +21,9 @@
 		7FACC9CE18F17D16004FCE04 /* javascript.js in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC9CC18F17D16004FCE04 /* javascript.js */; };
 		7FACC9CF18F17D38004FCE04 /* javascript.js in Resources */ = {isa = PBXBuildFile; fileRef = 7FACC9CC18F17D16004FCE04 /* javascript.js */; };
 		7FACC9D518F1BFB1004FCE04 /* NPSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC9D418F1BFB1004FCE04 /* NPSideMenuViewController.m */; };
-		7FE736741905BAF5007BF363 /* seed.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7FE736731905BA09007BF363 /* seed.sqlite */; };
+		7FCC9DE7190B6F1A00966984 /* NewsPlace.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7FCC9DE4190B6C6D00966984 /* NewsPlace.sqlite */; };
+		7FCC9DE8190B6F1A00966984 /* NewsPlace.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 7FCC9DE5190B6C6D00966984 /* NewsPlace.sqlite-shm */; };
+		7FCC9DE9190B6F1A00966984 /* NewsPlace.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 7FCC9DE6190B6C6D00966984 /* NewsPlace.sqlite-wal */; };
 		F63E2C5718E5972800E3A4A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63E2C5618E5972800E3A4A7 /* Foundation.framework */; };
 		F63E2C5918E5972800E3A4A7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63E2C5818E5972800E3A4A7 /* CoreGraphics.framework */; };
 		F63E2C5B18E5972800E3A4A7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63E2C5A18E5972800E3A4A7 /* UIKit.framework */; };
@@ -80,7 +82,9 @@
 		7FACC9CC18F17D16004FCE04 /* javascript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = javascript.js; sourceTree = "<group>"; };
 		7FACC9D318F1BFB1004FCE04 /* NPSideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPSideMenuViewController.h; sourceTree = "<group>"; };
 		7FACC9D418F1BFB1004FCE04 /* NPSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPSideMenuViewController.m; sourceTree = "<group>"; };
-		7FE736731905BA09007BF363 /* seed.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = seed.sqlite; sourceTree = "<group>"; };
+		7FCC9DE4190B6C6D00966984 /* NewsPlace.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewsPlace.sqlite; sourceTree = "<group>"; };
+		7FCC9DE5190B6C6D00966984 /* NewsPlace.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewsPlace.sqlite-shm"; sourceTree = "<group>"; };
+		7FCC9DE6190B6C6D00966984 /* NewsPlace.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewsPlace.sqlite-wal"; sourceTree = "<group>"; };
 		8F5001534F134F80B0C69A03 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		F63E2C5318E5972800E3A4A7 /* NewsPlace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsPlace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F63E2C5618E5972800E3A4A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -196,7 +200,9 @@
 		F63E2C5F18E5972800E3A4A7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				7FE736731905BA09007BF363 /* seed.sqlite */,
+				7FCC9DE4190B6C6D00966984 /* NewsPlace.sqlite */,
+				7FCC9DE5190B6C6D00966984 /* NewsPlace.sqlite-shm */,
+				7FCC9DE6190B6C6D00966984 /* NewsPlace.sqlite-wal */,
 				7FACC9CB18F17D16004FCE04 /* HTMLBase.html */,
 				7FACC9CC18F17D16004FCE04 /* javascript.js */,
 				F63E2C6018E5972800E3A4A7 /* NewsPlace-Info.plist */,
@@ -370,7 +376,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FE736741905BAF5007BF363 /* seed.sqlite in Resources */,
+				7FCC9DE7190B6F1A00966984 /* NewsPlace.sqlite in Resources */,
+				7FCC9DE8190B6F1A00966984 /* NewsPlace.sqlite-shm in Resources */,
+				7FCC9DE9190B6F1A00966984 /* NewsPlace.sqlite-wal in Resources */,
 				7FACC9CF18F17D38004FCE04 /* javascript.js in Resources */,
 				7FACC9CD18F17D16004FCE04 /* HTMLBase.html in Resources */,
 				F63E2C6318E5972800E3A4A7 /* InfoPlist.strings in Resources */,
