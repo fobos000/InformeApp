@@ -123,7 +123,10 @@ static int sourcesContext;
     }
     
     self.frc.fetchRequest.predicate = pr;
-    [self.frc performFetch:nil];
+    
+    [self.context performBlockAndWait:^{
+        [self.frc performFetch:nil];
+    }];
     
     self.tableView.dataSource = [self currentDataSource];
     self.tableView.delegate = [self currentDataSource];
