@@ -8,7 +8,7 @@
 
 #import "NPAAPIClient.h"
 
-static NSString * const NPAPIBaseURLString = @"http://supernews.herokuapp.com/outside/";
+static NSString * const NPAPIBaseURLString = @"http://lvivnews.biz.tm/outside/";
 
 @implementation NPAAPIClient
 
