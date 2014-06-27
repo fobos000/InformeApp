@@ -22,6 +22,7 @@
 @dynamic title;
 @dynamic sourceId;
 @dynamic categoryId;
+@dynamic locale;
 
 + (NSString *)idProperty
 {

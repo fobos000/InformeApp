@@ -44,6 +44,8 @@
 		F63E2C9918E59ED700E3A4A7 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F63E2C9818E59ED700E3A4A7 /* Storyboard.storyboard */; };
 		F63E2C9F18E59F3200E3A4A7 /* NPHighlightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F63E2C9E18E59F3200E3A4A7 /* NPHighlightsViewController.m */; };
 		F6AA401218F42BCF003940A6 /* ArticleCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA401118F42BCF003940A6 /* ArticleCategory.m */; };
+		F6C55F5F195C672E00815792 /* NPLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C55F5E195C672E00815792 /* NPLanguage.m */; };
+		F6C55F65195C69D400815792 /* NPLanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C55F64195C69D400815792 /* NPLanguageManager.m */; };
 		F6CE083618EF1A4000BA4011 /* NSManagedObject+Fetching.m in Sources */ = {isa = PBXBuildFile; fileRef = F6CE083318EF1A4000BA4011 /* NSManagedObject+Fetching.m */; };
 		F6CE083718EF1A4000BA4011 /* NSManagedObject+JSONMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = F6CE083518EF1A4000BA4011 /* NSManagedObject+JSONMapping.m */; };
 		F6CE083B18EF1B5000BA4011 /* NPDateParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F6CE083A18EF1B5000BA4011 /* NPDateParser.m */; };
@@ -114,6 +116,10 @@
 		F63E2C9E18E59F3200E3A4A7 /* NPHighlightsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPHighlightsViewController.m; sourceTree = "<group>"; };
 		F6AA401018F42BCF003940A6 /* ArticleCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleCategory.h; sourceTree = "<group>"; };
 		F6AA401118F42BCF003940A6 /* ArticleCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleCategory.m; sourceTree = "<group>"; };
+		F6C55F5D195C672E00815792 /* NPLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPLanguage.h; sourceTree = "<group>"; };
+		F6C55F5E195C672E00815792 /* NPLanguage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPLanguage.m; sourceTree = "<group>"; };
+		F6C55F63195C69D400815792 /* NPLanguageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPLanguageManager.h; sourceTree = "<group>"; };
+		F6C55F64195C69D400815792 /* NPLanguageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPLanguageManager.m; sourceTree = "<group>"; };
 		F6CE083218EF1A4000BA4011 /* NSManagedObject+Fetching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+Fetching.h"; path = "../Model/NSManagedObject+Fetching.h"; sourceTree = "<group>"; };
 		F6CE083318EF1A4000BA4011 /* NSManagedObject+Fetching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+Fetching.m"; path = "../Model/NSManagedObject+Fetching.m"; sourceTree = "<group>"; };
 		F6CE083418EF1A4000BA4011 /* NSManagedObject+JSONMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+JSONMapping.h"; path = "../Model/NSManagedObject+JSONMapping.h"; sourceTree = "<group>"; };
@@ -257,6 +263,10 @@
 				F6AA401118F42BCF003940A6 /* ArticleCategory.m */,
 				7FCC9DED191E4DBE00966984 /* NPEmptyTableDataSource.h */,
 				7FCC9DEE191E4DBE00966984 /* NPEmptyTableDataSource.m */,
+				F6C55F5D195C672E00815792 /* NPLanguage.h */,
+				F6C55F5E195C672E00815792 /* NPLanguage.m */,
+				F6C55F63195C69D400815792 /* NPLanguageManager.h */,
+				F6C55F64195C69D400815792 /* NPLanguageManager.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -458,7 +468,9 @@
 				F63E2C6518E5972800E3A4A7 /* main.m in Sources */,
 				7FA8AF8F19028615003EAEE3 /* NPSettingsViewController.m in Sources */,
 				7FACC9D518F1BFB1004FCE04 /* NPSideMenuViewController.m in Sources */,
+				F6C55F65195C69D400815792 /* NPLanguageManager.m in Sources */,
 				7FACC9CA18F17C30004FCE04 /* NSString+JSONString.m in Sources */,
+				F6C55F5F195C672E00815792 /* NPLanguage.m in Sources */,
 				F6CE083618EF1A4000BA4011 /* NSManagedObject+Fetching.m in Sources */,
 				7FACC9CE18F17D16004FCE04 /* javascript.js in Sources */,
 			);

@@ -17,8 +17,9 @@
 @property (nonatomic, retain) NSNumber * serverId;
 @property (nonatomic, retain) NSString * sourceLink;
 @property (nonatomic, retain) NSString * title;
-@property (nonatomic, retain) NSNumber *sourceId;
-@property (nonatomic, retain) NSNumber *categoryId;
+@property (nonatomic, retain) NSNumber * sourceId;
+@property (nonatomic, retain) NSNumber * categoryId;
+@property (nonatomic, retain) NSString * locale;
 
 - (NSString *)sourceName;
 - (NSString *)formattedDate;

@@ -11,6 +11,13 @@
 #import "NPSourceTableViewCell.h"
 #import "NSManagedObject+Fetching.h"
 #import "NPNotifications.h"
+#import "NPLanguageManager.h"
+
+typedef enum : NSUInteger {
+    SourcesSettingsSection,
+    LanguageSettingsSection,
+    SettingsSectionCount
+} SettingsSection;
 
 @interface NPSettingsViewController ()
 
@@ -62,16 +69,43 @@
 
 #pragma mark - Table view data source
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return SettingsSectionCount;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return self.sources.count;
+    switch (section) {
+        case SourcesSettingsSection:
+            return self.sources.count;
+        
+        case LanguageSettingsSection:
+            return [NPLanguageManager languages].count;
+        
+        default:
+            return 0;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NPSourceTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SourceCell" forIndexPath:indexPath];
-    
+    switch (indexPath.section) {
+        case SourcesSettingsSection:
+            return [self sourceCellForIndexPath:indexPath];
+        
+        case LanguageSettingsSection:
+            return [self languageCellForIndexPath:indexPath];
+            
+        default:
+            return 0;
+    }
+}
+
+- (UITableViewCell *)sourceCellForIndexPath:(NSIndexPath *)indexPath
+{
+    NPSourceTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SourceCell"
+                                                                       forIndexPath:indexPath];
     ArticleSource *source = self.sources[indexPath.row];
     
     cell.sourceLabel.text = source.name;
@@ -81,6 +115,44 @@
     };
     
     return cell;
+}
+
+- (UITableViewCell *)languageCellForIndexPath:(NSIndexPath *)indexPath
+{
+    NPSourceTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"LanguageCell"
+                                                                       forIndexPath:indexPath];
+    NPLanguage *language = [NPLanguageManager languages][indexPath.row];
+    
+    cell.textLabel.text = language.name;
+    if (language == [NPLanguageManager currentLanguage]) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
+    return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    switch (section) {
+        case SourcesSettingsSection:
+            return NSLocalizedString(@"Source", nil);
+        case LanguageSettingsSection:
+            return NSLocalizedString(@"Language", nil);
+        default:
+            return nil;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == LanguageSettingsSection) {
+        NPLanguage *selectedLanguage = [NPLanguageManager languages][indexPath.row];
+        [NPLanguageManager setCurrentLanguage:selectedLanguage];
+        [tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section]
+                 withRowAnimation:UITableViewRowAnimationNone];
+    }
 }
 
 
@@ -130,9 +202,9 @@
     if ([segue.identifier isEqualToString:@"UnwindSettingsSegue"]) {
         if (self.context.hasChanges) {
             [self.context save:nil];
-            [[NSNotificationCenter defaultCenter]
-             postNotificationName:kSettingsUpdatedNotification object:nil];
         }
+        [[NSNotificationCenter defaultCenter]
+         postNotificationName:kSettingsUpdatedNotification object:nil];
     }
 }
 

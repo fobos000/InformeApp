@@ -20,6 +20,7 @@
 #import "NPNotifications.h"
 #import "NSManagedObject+Fetching.h"
 #import "NPEmptyTableDataSource.h"
+#import "NPLanguageManager.h"
 
 static int categoryContext;
 static int sourcesContext;
@@ -98,6 +99,9 @@ static int sourcesContext;
         categoryPred = [NSPredicate predicateWithFormat:@"categoryId = %@", self.category.serverId];
     }
     
+    NSPredicate *localePredicate = [NSPredicate predicateWithFormat:@"locale ==[c] %@",
+                                    [NPLanguageManager currentLanguage].shortName.lowercaseString];
+    
     NSMutableArray *predicates = [NSMutableArray array];
     if (sourcesPred) {
         [predicates addObject:sourcesPred];
@@ -105,6 +109,7 @@ static int sourcesContext;
     if (categoryPred) {
         [predicates addObject:categoryPred];
     }
+    [predicates addObject:localePredicate];
     
     if (predicates.count) {
         pr = [[NSCompoundPredicate alloc] initWithType:NSAndPredicateType subpredicates:predicates];
