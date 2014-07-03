@@ -19,7 +19,7 @@ static NSArray *sLanguages = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         NPLanguage *ukrainian = [[NPLanguage alloc] initWithName:@"Ukrainian"
-                                                       shortName:@"UK"];
+                                                       shortName:@"UA"];
         NPLanguage *russian = [[NPLanguage alloc] initWithName:@"Russian"
                                                      shortName:@"RU"];
         

@@ -10,6 +10,9 @@
 
 @interface NPDataLoader : NSObject
 
+@property (nonatomic, readonly) NSDate *lastUpdateDate;
+@property (nonatomic, readonly) BOOL needsUpdate;
+
 + (void)loadDataWithBlock:(void (^)(BOOL success))block;
 + (NSURLSessionDataTask *)loadSourcesWithBlock:(void (^)(BOOL success))block;
 + (NSURLSessionDataTask *)loadArticlesWithBlock:(void (^)(BOOL success))block;

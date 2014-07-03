@@ -16,7 +16,23 @@
 #import "NPAAPIClient.h"
 #import "NPAppDelegate.h"
 
+@interface NPDataLoader ()
+
+@property (nonatomic, readwrite) NSDate *lastUpdateDate;
+
+@end
+
 @implementation NPDataLoader
+
+static NPDataLoader *sDataLoader = nil;
+
++ (void)initialize
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sDataLoader = [[NPDataLoader alloc] init];
+    });
+}
 
 + (NSManagedObjectContext *)managedObjectContext
 {
@@ -69,9 +85,13 @@
             }
         }
         [self saveChanges];
-         if (block) {
-             block(YES);
-         }
+        
+        // Save last update time
+        sDataLoader.lastUpdateDate = [NSDate date];
+                                 
+        if (block) {
+            block(YES);
+        }
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"%@", error);
         if (block) {
