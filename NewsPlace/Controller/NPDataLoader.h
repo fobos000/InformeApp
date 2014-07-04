@@ -13,6 +13,8 @@
 @property (nonatomic, readonly) NSDate *lastUpdateDate;
 @property (nonatomic, readonly) BOOL needsUpdate;
 
++ (NPDataLoader *)sharedInstance;
+
 + (void)loadDataWithBlock:(void (^)(BOOL success))block;
 + (NSURLSessionDataTask *)loadSourcesWithBlock:(void (^)(BOOL success))block;
 + (NSURLSessionDataTask *)loadArticlesWithBlock:(void (^)(BOOL success))block;

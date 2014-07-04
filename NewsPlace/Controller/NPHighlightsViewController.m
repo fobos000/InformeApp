@@ -70,7 +70,6 @@ static int sourcesContext;
     self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:@"SNHeadlineCell"];
     
     [self prepareFetchResultsController];
-    [self refresh];
     
     UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
     [refresh addTarget:self
@@ -78,6 +77,15 @@ static int sourcesContext;
       forControlEvents:UIControlEventValueChanged];
     
     self.refreshControl = refresh;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if ([NPDataLoader sharedInstance].needsUpdate) {
+        [self refresh];
+    }
 }
 
 - (void)prepareFetchResultsController

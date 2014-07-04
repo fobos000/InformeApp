@@ -16,6 +16,8 @@
 #import "NPAAPIClient.h"
 #import "NPAppDelegate.h"
 
+#define kUpdateInterval 5 * 60 // 5 minutes
+
 @interface NPDataLoader ()
 
 @property (nonatomic, readwrite) NSDate *lastUpdateDate;
@@ -25,6 +27,11 @@
 @implementation NPDataLoader
 
 static NPDataLoader *sDataLoader = nil;
+
++ (NPDataLoader *)sharedInstance
+{
+    return sDataLoader;
+}
 
 + (void)initialize
 {
@@ -146,6 +153,15 @@ static NPDataLoader *sDataLoader = nil;
             block(NO);
         }
     }];
+}
+
+- (BOOL)needsUpdate
+{
+    if (!_lastUpdateDate) {
+        return YES;
+    }
+    NSDate *now = [NSDate date];
+    return [now timeIntervalSinceDate:self.lastUpdateDate] > kUpdateInterval;
 }
 
 @end
