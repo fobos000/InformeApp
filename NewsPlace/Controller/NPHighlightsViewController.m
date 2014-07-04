@@ -70,7 +70,6 @@ static int sourcesContext;
     self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:@"SNHeadlineCell"];
     
     [self prepareFetchResultsController];
-    [self refresh];
     
     UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
     [refresh addTarget:self
@@ -78,6 +77,14 @@ static int sourcesContext;
       forControlEvents:UIControlEventValueChanged];
     
     self.refreshControl = refresh;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [self showRefreshControl];
+    [self refresh];
 }
 
 - (void)prepareFetchResultsController
@@ -148,6 +155,12 @@ static int sourcesContext;
 - (void)endRefreshing
 {
     [self.refreshControl endRefreshing];
+}
+
+- (void)showRefreshControl
+{
+    [self.tableView setContentOffset:CGPointMake(0.0f, -60.f)];
+    [self.refreshControl beginRefreshing];
 }
 
 #pragma mark - Side menu
