@@ -19,16 +19,7 @@
 
 + (NSArray *)allObjectsInContext:(NSManagedObjectContext *)context;
 {
-    NSEntityDescription *entity = [self entityDescriptionInContext:context];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:entity];
-    
-    NSError *error = nil;
-    NSArray *results = [context executeFetchRequest:request error:&error];
-    if (error != nil) {
-        //handle errors
-    }
-    return results;
+    return [self objectsWithPredicate:nil sortDescriptors:nil inContext:context];
 }
 
 + (NSArray *)objectsWithPredicate:(NSPredicate *)predicate
@@ -65,7 +56,12 @@
 
 + (NSManagedObject *)newObjectInContext:(NSManagedObjectContext *)context
 {
-    return [NSEntityDescription insertNewObjectForEntityForName:[[self entityDescriptionInContext:context] name] inManagedObjectContext:context];
+    __block NSManagedObject *newObjectInContext = nil;
+    [context performBlockAndWait:^{
+        newObjectInContext = [NSEntityDescription insertNewObjectForEntityForName:[[self entityDescriptionInContext:context] name]
+                                                           inManagedObjectContext:context];
+    }];
+    return newObjectInContext;
 }
 
 + (NSManagedObject *)findOrCreateObjectWithPredicate:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)context

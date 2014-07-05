@@ -21,6 +21,7 @@
 @interface NPDataLoader ()
 
 @property (nonatomic, readwrite) NSDate *lastUpdateDate;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 @end
 
@@ -43,8 +44,15 @@ static NPDataLoader *sDataLoader = nil;
 
 + (NSManagedObjectContext *)managedObjectContext
 {
-    NPAppDelegate *appDelegate = (NPAppDelegate *)[[UIApplication sharedApplication] delegate];
-    return appDelegate.managedObjectContext;
+    if (!sDataLoader.managedObjectContext) {
+        NPAppDelegate *appDelegate = (NPAppDelegate *)[[UIApplication sharedApplication] delegate];
+        NSManagedObjectContext* context = [[NSManagedObjectContext alloc]
+                                           initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+        context.persistentStoreCoordinator = appDelegate.persistentStoreCoordinator;
+        context.undoManager = nil;
+        sDataLoader.managedObjectContext = context;
+    }
+    return sDataLoader.managedObjectContext;
 }
 
 + (void)saveChanges
@@ -60,11 +68,17 @@ static NPDataLoader *sDataLoader = nil;
 + (void)loadDataWithBlock:(void (^)(BOOL success))block
 {
     [self loadSourcesWithBlock:^(BOOL success) {
-        [self loadCategoriesWithBlock:^(BOOL success) {
-            if (success) {
-                [self loadArticlesWithBlock:block];
-            }
-        }];
+        if (!success) {
+            block(NO);
+        } else {
+            [self loadCategoriesWithBlock:^(BOOL success) {
+                if (!success) {
+                    block(NO);
+                } else {
+                    [self loadArticlesWithBlock:block];
+                }
+            }];
+        }
     }];
 }
 

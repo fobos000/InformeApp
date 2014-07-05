@@ -79,11 +79,18 @@ static int sourcesContext;
     self.refreshControl = refresh;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
     if ([NPDataLoader sharedInstance].needsUpdate) {
+        [self showRefreshControl];
         [self refresh];
     }
 }
@@ -156,6 +163,12 @@ static int sourcesContext;
 - (void)endRefreshing
 {
     [self.refreshControl endRefreshing];
+}
+
+- (void)showRefreshControl
+{
+    [self.tableView setContentOffset:CGPointMake(0.0f, -60.f)];
+    [self.refreshControl beginRefreshing];
 }
 
 #pragma mark - Side menu
