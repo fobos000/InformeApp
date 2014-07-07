@@ -329,7 +329,13 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" id="tEU-d8-jqN"/>
+                    <navigationItem key="navigationItem" id="tEU-d8-jqN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Lgo-EH-TN0">
+                            <connections>
+                                <action selector="share:" destination="Rr4-FV-zKg" id="bH6-Lc-shS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView" destination="uJR-VL-Xa1" id="RAX-v5-sBf"/>
                     </connections>

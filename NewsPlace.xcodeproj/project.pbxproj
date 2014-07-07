@@ -49,6 +49,7 @@
 		F6CE083618EF1A4000BA4011 /* NSManagedObject+Fetching.m in Sources */ = {isa = PBXBuildFile; fileRef = F6CE083318EF1A4000BA4011 /* NSManagedObject+Fetching.m */; };
 		F6CE083718EF1A4000BA4011 /* NSManagedObject+JSONMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = F6CE083518EF1A4000BA4011 /* NSManagedObject+JSONMapping.m */; };
 		F6CE083B18EF1B5000BA4011 /* NPDateParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F6CE083A18EF1B5000BA4011 /* NPDateParser.m */; };
+		F6D2F37A1967027400CBC697 /* NPSocialShareDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D2F3791967027400CBC697 /* NPSocialShareDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,8 @@
 		F6CE083518EF1A4000BA4011 /* NSManagedObject+JSONMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+JSONMapping.m"; path = "../Model/NSManagedObject+JSONMapping.m"; sourceTree = "<group>"; };
 		F6CE083918EF1B5000BA4011 /* NPDateParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPDateParser.h; sourceTree = "<group>"; };
 		F6CE083A18EF1B5000BA4011 /* NPDateParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPDateParser.m; sourceTree = "<group>"; };
+		F6D2F3781967027400CBC697 /* NPSocialShareDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPSocialShareDelegate.h; sourceTree = "<group>"; };
+		F6D2F3791967027400CBC697 /* NPSocialShareDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPSocialShareDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +270,8 @@
 				F6C55F5E195C672E00815792 /* NPLanguage.m */,
 				F6C55F63195C69D400815792 /* NPLanguageManager.h */,
 				F6C55F64195C69D400815792 /* NPLanguageManager.m */,
+				F6D2F3781967027400CBC697 /* NPSocialShareDelegate.h */,
+				F6D2F3791967027400CBC697 /* NPSocialShareDelegate.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -363,9 +368,6 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Ostap Horbach";
 				TargetAttributes = {
-					F63E2C5218E5972800E3A4A7 = {
-						DevelopmentTeam = CM2Y94S8FE;
-					};
 					F63E2C7218E5972800E3A4A7 = {
 						TestTargetID = F63E2C5218E5972800E3A4A7;
 					};
@@ -454,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FA8AF9B19031634003EAEE3 /* NPNotifications.m in Sources */,
+				F6D2F37A1967027400CBC697 /* NPSocialShareDelegate.m in Sources */,
 				7F4D276518ED34D000FEFC56 /* NPDataLoader.m in Sources */,
 				F63E2C6918E5972800E3A4A7 /* NPAppDelegate.m in Sources */,
 				7FA8AF9819028CF4003EAEE3 /* NPSourceTableViewCell.m in Sources */,
@@ -593,14 +596,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NewsPlace/NewsPlace-Prefix.pch";
 				INFOPLIST_FILE = "NewsPlace/NewsPlace-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -611,14 +611,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NewsPlace/NewsPlace-Prefix.pch";
 				INFOPLIST_FILE = "NewsPlace/NewsPlace-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

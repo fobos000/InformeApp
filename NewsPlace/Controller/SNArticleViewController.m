@@ -8,11 +8,13 @@
 
 #import "SNArticleViewController.h"
 #import "NSString+JSONString.h"
+#import "NPSocialShareDelegate.h"
 
-@interface SNArticleViewController () <UIWebViewDelegate>
+@interface SNArticleViewController () <UIWebViewDelegate, UIActionSheetDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (nonatomic) BOOL loadedArticle;
+@property (nonatomic, strong) NPSocialShareDelegate *socialShareDelegate;
 
 @end
 
@@ -87,5 +89,38 @@
 {
     _article = article;
 }
+
+#pragma mark - UIActionSheetDelegate
+
+- (NPSocialShareDelegate *)socialShareDelegate
+{
+    if (!_socialShareDelegate) {
+        _socialShareDelegate = [[NPSocialShareDelegate alloc] init];
+    }
+    return _socialShareDelegate;
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    
+}
+
+#pragma mark - IB Actions
+
+- (IBAction)share:(id)sender
+{
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+                                                             delegate:self.socialShareDelegate
+                                                    cancelButtonTitle:@"Cancel"
+                                               destructiveButtonTitle:nil
+                                                    otherButtonTitles:nil];
+    
+    for (NSString *buttonTitle in self.socialShareDelegate.buttonTitles) {
+        [actionSheet addButtonWithTitle:buttonTitle];
+    }
+    
+    [actionSheet showInView:self.view];
+}
+
 
 @end
