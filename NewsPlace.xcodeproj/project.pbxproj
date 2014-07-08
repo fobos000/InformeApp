@@ -43,6 +43,7 @@
 		F63E2C8E18E5997600E3A4A7 /* NPAAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F63E2C8D18E5997600E3A4A7 /* NPAAPIClient.m */; };
 		F63E2C9918E59ED700E3A4A7 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F63E2C9818E59ED700E3A4A7 /* Storyboard.storyboard */; };
 		F63E2C9F18E59F3200E3A4A7 /* NPHighlightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F63E2C9E18E59F3200E3A4A7 /* NPHighlightsViewController.m */; };
+		F69F666A196AB5E500088ACF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69F6669196AB5E500088ACF /* Social.framework */; };
 		F6AA401218F42BCF003940A6 /* ArticleCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA401118F42BCF003940A6 /* ArticleCategory.m */; };
 		F6C55F5F195C672E00815792 /* NPLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C55F5E195C672E00815792 /* NPLanguage.m */; };
 		F6C55F65195C69D400815792 /* NPLanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C55F64195C69D400815792 /* NPLanguageManager.m */; };
@@ -115,6 +116,7 @@
 		F63E2C9818E59ED700E3A4A7 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		F63E2C9D18E59F3200E3A4A7 /* NPHighlightsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPHighlightsViewController.h; sourceTree = "<group>"; };
 		F63E2C9E18E59F3200E3A4A7 /* NPHighlightsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPHighlightsViewController.m; sourceTree = "<group>"; };
+		F69F6669196AB5E500088ACF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		F6AA401018F42BCF003940A6 /* ArticleCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleCategory.h; sourceTree = "<group>"; };
 		F6AA401118F42BCF003940A6 /* ArticleCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleCategory.m; sourceTree = "<group>"; };
 		F6C55F5D195C672E00815792 /* NPLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPLanguage.h; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F69F666A196AB5E500088ACF /* Social.framework in Frameworks */,
 				F63E2C5918E5972800E3A4A7 /* CoreGraphics.framework in Frameworks */,
 				F63E2C5D18E5972800E3A4A7 /* CoreData.framework in Frameworks */,
 				F63E2C5B18E5972800E3A4A7 /* UIKit.framework in Frameworks */,
@@ -181,6 +184,7 @@
 		F63E2C5518E5972800E3A4A7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F69F6669196AB5E500088ACF /* Social.framework */,
 				F63E2C5618E5972800E3A4A7 /* Foundation.framework */,
 				F63E2C5818E5972800E3A4A7 /* CoreGraphics.framework */,
 				F63E2C5A18E5972800E3A4A7 /* UIKit.framework */,

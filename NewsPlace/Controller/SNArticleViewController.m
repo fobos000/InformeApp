@@ -10,7 +10,8 @@
 #import "NSString+JSONString.h"
 #import "NPSocialShareDelegate.h"
 
-@interface SNArticleViewController () <UIWebViewDelegate, UIActionSheetDelegate>
+@interface SNArticleViewController () <UIWebViewDelegate, UIActionSheetDelegate,
+NPSocialShareDelegateDataSource>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (nonatomic) BOOL loadedArticle;
@@ -96,13 +97,26 @@
 {
     if (!_socialShareDelegate) {
         _socialShareDelegate = [[NPSocialShareDelegate alloc] init];
+        _socialShareDelegate.presentingController = self;
+        _socialShareDelegate.dataSource = self;
     }
     return _socialShareDelegate;
 }
 
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+#pragma NPSocialShareDelegateDataSource
+
+- (NSString *)textForFacebookForSocialDelegate:(NPSocialShareDelegate *)delegate
 {
-    
+    Article *currentArticle = self.article;
+    return [NSString stringWithFormat:@"%@ %@", currentArticle.title,
+            currentArticle.sourceLink];
+}
+
+- (NSString *)textForTwitterForSocialDelegate:(NPSocialShareDelegate *)delegate
+{
+    Article *currentArticle = self.article;
+    return [NSString stringWithFormat:@"%@ %@", currentArticle.title,
+            currentArticle.sourceLink];
 }
 
 #pragma mark - IB Actions
@@ -111,13 +125,16 @@
 {
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
                                                              delegate:self.socialShareDelegate
-                                                    cancelButtonTitle:@"Cancel"
+                                                    cancelButtonTitle:nil
                                                destructiveButtonTitle:nil
                                                     otherButtonTitles:nil];
     
     for (NSString *buttonTitle in self.socialShareDelegate.buttonTitles) {
         [actionSheet addButtonWithTitle:buttonTitle];
     }
+    
+    [actionSheet addButtonWithTitle:NSLocalizedString(@"Cancel", nil)];
+    actionSheet.cancelButtonIndex = self.socialShareDelegate.buttonTitles.count;
     
     [actionSheet showInView:self.view];
 }
